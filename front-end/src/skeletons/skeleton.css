@@ -1,0 +1,36 @@
+/* Designer: David Bishop
+  <==========================================/ Home Skeleton Start \==========================================>
+*/
+
+.homeSkeletonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeSkeletonContainer .asideSkeletonContainer {
+  float: left;
+  height: 84vh;
+  margin-left: 1rem;
+}
+
+.asideSkeleton {
+  height: 100% !important;
+}
+
+.homeSkeletonContainer .contentSkeletonContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+  margin-left: 1rem;
+}
+
+.titleSkeleton {
+  margin-bottom: 1rem;
+  height: 28vh !important;
+}
+
+.contentSkeleton {
+  margin-bottom: 1rem;
+  height: 52vh !important;
+}

@@ -1,0 +1,69 @@
+/* Designer: David Bishop
+  <==============================================/ Nav Bar Start \==============================================>
+*/
+
+.navBarContainer {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+
+  background-color: var(--contentBackgroundColour);
+  border-bottom: 2px solid var(--primary200Main);
+  margin-bottom: 2rem;
+  /* padding: 0.5rem 1rem 0.5rem 0.5rem; */
+  padding: 3px 1rem 3px 3px;
+  /* padding-right: 2rem;
+  padding-bottom: 3px; */
+}
+
+/* .navBarContainer .icon {
+  display: flex;
+  justify-content: flex-end;
+} */
+
+/* FIXME: Moves everything over for some reason. */
+/* .navBarContainer:not(.left) {
+  justify-content: flex-end;
+} */
+
+.navBarContainer .navFlex {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.navBarContainer .icon {
+  float: left;
+}
+
+.navBarContainer a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--primary200Main);
+}
+
+.navBarContainer .left {
+  display: flex;
+  float: left;
+  gap: 2.5rem;
+  margin-left: 2.5rem;
+}
+
+.navBarContainer .left a {
+  font-size: 16px;
+}
+
+.navBarContainer .right {
+  /* display: flex;
+  justify-content: flex-end;
+  width: 78%; */
+  margin-right: 2rem;
+}
+
+/* <=============================================/ Footer Start \=============================================> */
+
+footer {
+  margin-top: 6rem;
+}

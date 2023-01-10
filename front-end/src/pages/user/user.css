@@ -1,0 +1,693 @@
+/* Designer: David Bishop
+  <=============================================/ Login Page Start \=============================================>
+*/
+
+.loginFlexContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginFormContainer {
+  position: relative;
+  top: 6rem;
+}
+
+.loginFlexContainer .loginFormContainer .loginBox {
+  display: flex;
+  flex-direction: column;
+  /* row-gap: 0.8rem; */
+  max-width: 17.8125rem;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  box-shadow: -4px 10px 8px rgba(0, 0, 0, 0.2);
+
+  background-color: var(--offWhite);
+}
+
+.loginFlexContainer .loginFormContainer .loginBox h1 {
+  /* align-self: center; */
+  /* text-align: center; */
+  /* font-family: "Overpass"; */
+  font-family: "merriweather", serif;
+  font-size: 32px;
+  pointer-events: none;
+  color: var(--wordsH1Main);
+  /* color: var(--purple300Main); */
+  /* background: -webkit-linear-gradient(
+    135deg,
+    var(--gray),
+    var(--purple200) 70%
+  ); */
+  /* background: -webkit-linear-gradient(
+    135deg,
+    var(--gray) 35%,
+    var(--wordsH1Main)
+  ); */
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; */
+  margin-bottom: 0.5rem;
+}
+
+.loginFlexContainer .loginFormContainer .loginBox label {
+  position: relative;
+  left: 3px;
+  bottom: 2rem;
+  /* margin-bottom: 0.5rem; */
+  pointer-events: none;
+  transition: 0.38s ease all;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--wordsMain);
+}
+
+.loginFlexContainer .loginFormContainer .loginBox label span {
+  color: var(--primary200Main);
+  font-size: 16px;
+}
+
+/* Label focus */
+.loginFlexContainer
+  .loginFormContainer
+  .loginBox
+  .inputDiv
+  input:focus
+  ~ #usernameLabel,
+.loginFlexContainer
+  .loginFormContainer
+  .loginBox
+  .inputDiv
+  input:focus
+  ~ #passwordLabel,
+.loginFlexContainer
+  .loginFormContainer
+  .loginBox
+  .inputDiv
+  input:not(:focus):valid
+  ~ #usernameLabel,
+.loginFlexContainer
+  .loginFormContainer
+  .loginBox
+  .inputDiv
+  input:not(:focus):valid
+  ~ #passwordLabel {
+  /* bottom: 3.625rem; */
+  /* bottom: 3.75rem; */
+  bottom: 3.85rem;
+  font-size: 14px;
+}
+
+.loginFlexContainer .loginFormContainer .loginBox .inputDiv input {
+  color: var(--third800Main);
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+
+  position: relative;
+  top: 0.2rem;
+  margin: 1rem 0 3px 0;
+  height: 42px;
+  width: 100%;
+  padding: 4px 2rem 4px 4px;
+  /* min-width: 8%; */
+  border-bottom: 2px solid var(--primary200Main);
+  background: transparent;
+  transition: 0.38s ease all;
+}
+
+/* Eye Icon */
+.loginFlexContainer .loginFormContainer .loginBox .inputDiv svg {
+  position: absolute;
+  left: 85%;
+  top: 60.75%;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+  cursor: pointer;
+  /* transition: 0.38s ease all; */
+
+  color: var(--gray);
+  color: var(--purple200);
+}
+
+.loginFlexContainer .loginFormContainer .loginBox .inputDiv svg:hover {
+  color: var(--purple300Main);
+}
+
+.loginFlexContainer .loginFormContainer .loginBox .inputDiv input:focus {
+  /* padding-bottom: 6px; */
+  /* font-weight: 600; */
+  border-width: 3px;
+  outline: none;
+  border-image: linear-gradient(
+    155deg,
+    var(--secondary300Main),
+    var(--primary200Main)
+  );
+  border-image-slice: 1;
+}
+
+.loginFlexContainer
+  .loginFormContainer
+  .loginBox
+  .inputDiv
+  input:focus::placeholder {
+  color: #013237;
+  /* background: linear-gradient(#d3d3d3, rgb(39, 167, 112));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; */
+}
+
+.loginFlexContainer .loginFormContainer .loginBox .loginButtonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.loginFlexContainer .loginFormContainer .loginBox button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  min-width: 160px;
+  min-height: 46px;
+  top: 2.3125rem;
+
+  cursor: pointer;
+  box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 0.7rem;
+
+  font-size: 1rem;
+  color: var(--whiteText);
+  /* background-color: var(--primary200Main); */
+  background-image: linear-gradient(
+    to right,
+    var(--secondary200) 15%,
+    var(--primary100) 100%
+  );
+}
+
+.loginFlexContainer .loginFormContainer .loginBox button:hover {
+  background-image: linear-gradient(
+    to right,
+    var(--secondary300Main) 15%,
+    var(--primary200Main) 100%
+  );
+}
+
+.loginFlexContainer .loginFormContainer .loginBox .loginButtonCursor {
+  cursor: not-allowed;
+}
+
+.inputError {
+  border-bottom: 2px solid var(--errColour);
+  box-shadow: -2px 4px 2px rgba(255, 15, 15, 0.7);
+  /* margin: 0 0 3px 0; */
+}
+
+/* This class is used when there is an error. */
+.loginFlexContainer .loginFormContainer .loginBox .inputDiv .positionIcon {
+  position: absolute;
+  left: 85%;
+  top: 64%;
+}
+
+/* Not Found Error Message */
+.loginFlexContainer .loginFormContainer .loginBox small {
+  margin-bottom: 0.7rem;
+  /* margin-left: 3px; */
+
+  color: var(--errColour);
+  font-size: 12px;
+  font-family: "Inter", sans-serif;
+}
+
+.loginFlexContainer .extras {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  top: 7.3rem;
+  padding: 1rem 2rem 1rem 2rem;
+  margin-top: 2rem;
+
+  border: 1px solid rgb(100, 100, 100, 0.4);
+  border: 1px solid rgb(1, 50, 55, 0.3);
+  border-radius: 0.5rem;
+  /* box-shadow: -4px 10px 8px rgba(0, 0, 0, 0.35); */
+  font-size: 14px;
+  /* background-color: rgb(246, 232, 223, 0.5); */
+  /* background-color: rgb(222, 192, 116, 0.15); */
+  /* background-color: rgb(139, 116, 222, 0.35); */
+  /* background-image: linear-gradient(
+    to right,
+    rgb(222, 116, 146, 0.8) 15%,
+    rgb(222, 140, 116, 0.8) 100%
+  ); */
+}
+
+.loginFlexContainer .extras p {
+  color: var(--wordsMain);
+  /* color: rgb(43, 43, 43, 0.8); */
+}
+
+.loginFlexContainer .extras a {
+  margin-left: 6px;
+}
+
+.loginFlexContainer .helpTxt {
+  position: relative;
+  top: 7.3rem;
+  margin-top: 5rem;
+  font-size: 12px;
+}
+
+/* <=============================================/ Register Page Start \=============================================> */
+
+.regGridContainer {
+  display: grid;
+  max-width: 100vw;
+  min-height: 100vh;
+  grid-template-columns: 575px 1fr;
+}
+
+.regGridContainer .formBackground {
+  background-color: #fafafa;
+}
+
+.regGridContainer .backArrow {
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+  width: 38px;
+  height: 38px;
+  color: var(--purple200);
+  cursor: pointer;
+}
+
+.regGridContainer .backArrow:hover {
+  color: var(--purple300Main);
+}
+
+.regGridContainer .imgContainer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 5.5rem;
+}
+
+.regGridContainer .formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: 4.5rem;
+  margin-top: 48px;
+}
+
+.regGridContainer .formContainer h1 {
+  font-family: "merriweather", serif;
+  font-size: 32px;
+  color: var(--wordsMain);
+  color: var(--wordsH1Main);
+  margin-bottom: 0.5rem;
+}
+
+.regGridContainer .formContainer .formMain {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+/* .regGridContainer .formContainer > div {
+  max-height: 62px;
+} */
+
+.regGridContainer .formContainer .formMain label {
+  position: relative;
+  bottom: 2rem;
+
+  pointer-events: none;
+  transition: 0.38s ease all;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--wordsMain);
+}
+
+.regGridContainer .formContainer .formMain #usernameLabel {
+  right: 5.8125rem;
+}
+
+.regGridContainer .formContainer .formMain #emailLabel {
+  right: 9rem;
+  /* right: 9.0625rem; */
+}
+
+.regGridContainer .formContainer .formMain #passwordLabel {
+  right: 7.9rem;
+  right: 8rem;
+}
+
+.regGridContainer .formContainer .formMain #usernameCount {
+  position: absolute;
+  right: 7.5rem;
+  top: 5.875rem;
+  font-family: "Montserrat", sans-serif;
+  color: var(--wordsMain);
+}
+
+.regGridContainer .formContainer .formMain #usernameCountIfError {
+  position: absolute;
+  right: 7.5rem;
+  top: 8.55rem;
+  font-family: "Montserrat", sans-serif;
+  color: var(--wordsMain);
+}
+
+.regGridContainer .formContainer .formMain label span {
+  color: var(--primary200Main);
+  font-size: 16px;
+}
+
+/* Label focus */
+/* FIXME: The email not focus is broken for some unknown reason. */
+.regGridContainer .formContainer .formMain input:focus ~ #usernameLabel,
+.regGridContainer .formContainer .formMain input:focus ~ #emailLabel,
+.regGridContainer .formContainer .formMain input:focus ~ #passwordLabel,
+.regGridContainer
+  .formContainer
+  .formMain
+  input:not(:focus):valid
+  ~ #usernameLabel,
+.regGridContainer
+  .formContainer
+  .formMain
+  input:not(:focus):valid
+  ~ #emailLabel,
+.regGridContainer
+  .formContainer
+  .formMain
+  input:not(:focus):valid
+  ~ #passwordLabel {
+  /* bottom: 3.625rem; */
+  /* bottom: 3.75rem; */
+  bottom: 3.85rem;
+  /* font-size: 14px; */
+}
+
+.regGridContainer .formContainer .formMain input {
+  color: var(--third800Main);
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+
+  position: relative;
+  /* top: 0.2rem; */
+  /* margin: 1rem 0 3px 0; */
+  height: 42px;
+  width: 360px;
+  padding: 4px 4px 4px 4px;
+  /* min-width: 8%; */
+  border-bottom: 2px solid var(--primary200Main);
+  background: transparent;
+  transition: 0.38s ease all;
+}
+
+.regGridContainer .formContainer .formMain input:focus {
+  /* padding-bottom: 6px; */
+  font-family: "Montserrat", sans-serif;
+  /* font-weight: 600; */
+  border-width: 3px;
+  outline: none;
+  border-image: linear-gradient(
+    155deg,
+    var(--secondary300Main),
+    var(--primary200Main)
+  );
+  border-image-slice: 1;
+}
+
+.loginFormContainer .loginBox .inputDiv input::placeholder {
+  color: var(--wordsMain);
+}
+
+.regGridContainer .formContainer .formExtras {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1.3rem;
+}
+
+.regGridContainer .formContainer .formExtras input {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+
+  position: relative;
+  height: 42px;
+  width: 169px;
+  padding: 4px 4px 4px 4px;
+  border-bottom: 2px solid var(--primary200Main);
+  background: transparent;
+  transition: 0.38s ease all;
+
+  color: var(--third800Main);
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.regGridContainer .formContainer .formExtras input:focus {
+  font-size: 16px;
+  border-width: 3px;
+  outline: none;
+  border-image: linear-gradient(
+    155deg,
+    var(--secondary300Main),
+    var(--primary200Main)
+  );
+  border-image-slice: 1;
+}
+
+.regGridContainer .formContainer .formExtras #phoneLabel,
+.regGridContainer .formContainer .formExtras #genreLabel {
+  position: absolute;
+  bottom: 13.3125rem;
+
+  pointer-events: none;
+  transition: 0.38s ease all;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--wordsMain);
+}
+
+.regGridContainer .formContainer .formExtras #phoneLabel {
+  left: 7rem;
+}
+
+.regGridContainer .formContainer .formExtras #genreLabel {
+  right: 9.6rem;
+}
+
+.regGridContainer .formContainer .formExtras div input:focus ~ #phoneLabel,
+.regGridContainer .formContainer .formExtras div input:focus ~ #genreLabel,
+.regGridContainer
+  .formContainer
+  .formExtras
+  div
+  input:not(:placeholder-shown)
+  ~ #phoneLabel,
+.regGridContainer
+  .formContainer
+  .formExtras
+  div
+  input:not(:placeholder-shown)
+  ~ #genreLabel {
+  bottom: 15.3125rem;
+  /* font-size: 14px; */
+}
+
+.regGridContainer .formContainer .registerButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.regGridContainer .formContainer .registerButtonContainer button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  min-width: 360px;
+  min-height: 46px;
+
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.35);
+  border-radius: 0.7rem;
+
+  font-size: 1rem;
+  color: var(--whiteText);
+  background-image: linear-gradient(
+    to right,
+    var(--secondary200) 15%,
+    var(--primary100) 100%
+  );
+  /* -webkit-transition: background-image 0.2s ease-in-out;
+  transition: background-image 0.2s ease-in-out; */
+}
+
+.regGridContainer .formContainer .registerButtonContainer button:hover {
+  background-image: linear-gradient(
+    to right,
+    var(--secondary300Main) 15%,
+    var(--primary200Main) 100%
+  );
+}
+
+.regGridContainer
+  .formContainer
+  .registerButtonContainer
+  .registerButtonCursor {
+  cursor: not-allowed;
+}
+
+.regGridContainer .formContainer .registerButtonContainer p {
+  margin-top: 2rem;
+  max-width: 360px;
+  font-size: 14px;
+  color: var(--wordsMain);
+}
+
+.regGridContainer .formContainer #takenError {
+  position: relative;
+  color: var(--errColour);
+  margin-bottom: 1.7rem;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+}
+
+.regGridContainer .formContainer #minLengthError {
+  position: absolute;
+  color: var(--errColour);
+  bottom: 17rem;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+}
+
+.regGridContainer .formContainer #phoneStringError {
+  position: absolute;
+  color: var(--errColour);
+  margin-top: 0.3rem;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+}
+
+.regGridContainer .supportTxtContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 0.5rem;
+  color: var(--wordsMain);
+}
+
+.regGridContainer .supportTxtContainer svg {
+  width: 24px;
+  height: 24px;
+  color: var(--purple300Main);
+}
+
+/* <=================================================/ Right Side \=================================================> */
+.welcomeContainer {
+  display: grid;
+  place-items: center;
+}
+
+.welcomeContainer .welcomeBackground {
+  /* display: grid;
+  place-items: center; */
+  margin: 2rem;
+  padding: 2rem;
+  background-color: var(--primary200Main);
+  /* background-color: var(--primary100); */
+  max-width: 1264px;
+  min-height: 735px;
+}
+
+.welcomeContainer .welcomeBackground .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.welcomeContainer .welcomeBackground h1 {
+  font-family: "BebasNeue";
+  font-size: 61px;
+  letter-spacing: 1rem;
+  color: var(--wordsH1Main);
+}
+
+.welcomeContainer .welcomeBackground small {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.1rem;
+}
+
+.welcomeContainer .welcomeBackground hr {
+  border: 1px solid var(--gray);
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.welcomeContainer .welcomeBackground .welcomeCarrousel {
+  display: flex;
+  position: relative;
+  /* max-width: 1200px; */
+  overflow: hidden;
+}
+
+/* .welcomeContainer .welcomeBackground .welcomeCarrouselLoading {
+  display: flex;
+  width: 1200px;
+  height: 450px;
+  background-color: red;
+} */
+
+.welcomeContainer .welcomeBackground .welcomeCarrousel img {
+  max-width: 300px;
+  min-height: 450px;
+  /* animation: slideshow 1s ease-in; */
+  animation: slideshow 5s linear infinite;
+}
+
+/* Loading Wheel */
+.loadingWheel {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid var(--secondary300Main);
+  border-radius: 50%;
+  pointer-events: none;
+
+  width: 24px;
+  height: 24px;
+  animation: spin 1s ease-in;
+}
+
+.logoutLink {
+  cursor: pointer;
+}
+
+.logoutLink:hover {
+  opacity: 0.7;
+}

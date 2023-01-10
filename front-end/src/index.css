@@ -1,0 +1,139 @@
+@font-face {
+  font-family: "Overpass";
+  src: local("Overpass"), url(./assets/fonts/Overpass/overpass-regular.otf),
+    format("opentype");
+}
+
+@font-face {
+  font-family: "Overpass";
+  src: local("Overpass"), url(./assets/fonts/Overpass/overpass-bold.otf),
+    format("opentype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "BebasNeue";
+  src: url(./assets/fonts/BebasNeue/BebasNeue-Regular.otf);
+}
+
+@font-face {
+  font-family: "BebasNeue";
+  src: url(./assets/fonts/BebasNeue/BebasNeue-Bold.otf);
+  font-weight: bold;
+}
+
+/* Adobe */
+@import url("https://use.typekit.net/uxp7qsv.css");
+/* Google */
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:wght@400;600;700&family=Fugaz+One&family=Inter:wght@400;500;600;700&family=Lato&family=Montserrat:wght@200;300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+html {
+  background-color: var(--backgroundColour);
+}
+
+/* #f6e8df */
+/* #faf1eb */
+/* #fafafa */
+/* #F2E9EA */
+/* rgba(229, 229, 229, 0.6) */
+/* #E7D9D1 */
+
+* {
+  margin: 0;
+  padding: 0;
+
+  font-family: "merriweather", serif;
+  border: 0;
+  box-sizing: border-box;
+  /* font-family: Overpass; */
+  /* font-family: BebasNeue; */
+  /* font-weight: bold; */
+}
+
+:root {
+  --backgroundColour: #f6e8df;
+
+  /* Primary Colour */
+  --primary100: #feae96;
+  --primary200Main: #de8c74;
+  --primary300: #bf6b51;
+  --primary400: #a85239;
+  --primary500: #8f361e;
+  --primary600: #832d1a;
+  --primary700: #711e10;
+
+  /* Secondary Colour */
+  --secondary100: #e2c8cf;
+  --secondary200: #e09eb0;
+  --secondary300Main: #de7492;
+  --secondary400: #db597c;
+  --secondary500: #d94566;
+  --secondary600: #c83f61;
+  --secondary700: #b43c5d;
+
+  /* Words Colour */
+  --third100: #a0bfc1;
+  --third200: #81a4a9;
+  --third300: #5f8b91;
+  --third400: #477a81;
+  --third500: #2a676e;
+  --third600: #1e585e;
+  --third700: #10444a;
+  --third800Main: #013237;
+  --wordsH1Main: rgb(1, 50, 55, 0.65);
+  --wordsMain: rgb(1, 50, 55, 0.85);
+
+  /* Optional Purple */
+  --purple100: #cfc3fa;
+  --purple200: #ad9bea;
+  --purple300Main: #8b74de;
+  --purple400: #6f57d2;
+  --purple500: #543bc8;
+  --purple600: #4838c4;
+  --purple700: #3a2eb8;
+
+  /* Optional Yellow */
+  --yellow100: #e9edff;
+  --yellow200: #e6e3d2;
+  --yellow300: #e5dba4;
+  --yellow400: #e2d288;
+  --yellow500: #e1cb7b;
+  --yellow600Main: #dec074;
+  --yellow700: #d8b069;
+  --yellow800: #d6a562;
+
+  --blacks: #2b2b2b;
+  --whiteText: rgb(255, 255, 255, 0.88);
+  --offWhite: #fafafa;
+  --contentBackgroundColour: rgb(250, 250, 250, 0.65);
+  --gray: rgba(43, 43, 43, 0.47);
+  --errColour: red;
+
+  /* try this as secondary after #db828c. */
+  /* Old secondary colour #fe979c. */
+  /* Maybe this yellow colour #dec074 for warning text small stuff. */
+  /* Nice purple colour #8b74de. */
+
+  /* --defaultShadow: box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.35); */
+}
+
+/* <==============================================/ Animations Start \==============================================> */
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slideshow {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
